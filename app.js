@@ -9,14 +9,16 @@ const fromEuroToDollar = function(valueInEuro){
 
 
 const fromDollarToYen = (valueInDollar)=>{
-    let valueInyen = (valueInDollar * 1.2) * 127.9;
+    let valueInyen = (valueInDollar * 1.2) * 127.9.toFixed(1);
     return valueInyen;
 }
 
 const fromYentoGBP = (valueinyen)=>{
-    let yenEuro = valueinyen / 127.9;
-    let valueInGBP = yenEuro * 0.8;
+    let yenEuro = valueinyen / 127.9.toFixed(1);
+    let valueInGBP = yenEuro * 0.8.toFixed(1);
     return valueInGBP;
+    
 }
+console.log(fromYentoGBP(15000));
 
 module.exports = {  fromEuroToDollar, fromDollarToYen,fromYentoGBP }

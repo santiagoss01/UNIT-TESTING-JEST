@@ -26,7 +26,7 @@ test ('127.9 yen should be 0.8 pounds', function(){
     const {fromYentoGBP} = require ('./app.js')
 
     const pound = fromYentoGBP (500)
-    const Yeneuro = 500 / 127.9;
+    const Yeneuro = 500 / 127.9.toFixed(1);
     const expected = Yeneuro * 0.8;
     expect(fromYentoGBP(500)).toBe(3.127443315089914);
 
